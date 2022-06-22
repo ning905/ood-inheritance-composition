@@ -9,11 +9,13 @@ class LibraryItem {
   }
 
   checkIn() {
-    throw new Error("newspapers are not available for loan");
+    if (!this.isOnLoan()) throw new Error("item is not currently on loan");
+    this.onLoan = false;
   }
 
   checkOut() {
-    throw new Error("newspapers are not available for loan");
+    if (this.isOnLoan()) throw new Error("item is currently on loan");
+    this.onLoan = true;
   }
 }
 
