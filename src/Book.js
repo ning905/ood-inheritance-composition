@@ -1,8 +1,9 @@
 const LibraryItem = require("../src/LibraryItem.js");
 
 class Book extends LibraryItem {
-  constructor(title) {
+  constructor(title, author) {
     super(title);
+    this.author = author;
   }
 }
 
