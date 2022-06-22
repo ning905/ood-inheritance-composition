@@ -1,20 +1,9 @@
-class Newspaper {
+const LibraryItem = require("./LibraryItem");
+
+class Newspaper extends LibraryItem {
   constructor(title) {
-    this.title = title
-    this.onLoan = false
-  }
-
-  isOnLoan() {
-    return this.onLoan
-  }
-
-  checkIn() {
-    throw new Error('newspapers are not available for loan')
-  }
-
-  checkOut() {
-    throw new Error('newspapers are not available for loan')
+    super(title);
   }
 }
 
-module.exports = Newspaper
+module.exports = Newspaper;

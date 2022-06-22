@@ -1,22 +1,9 @@
-class Book {
+const LibraryItem = require("../src/LibraryItem.js");
+
+class Book extends LibraryItem {
   constructor(title) {
-    this.title = title
-    this.onLoan = false
-  }
-
-  isOnLoan() {
-    return this.onLoan
-  }
-
-  checkIn() {
-     if (!this.isOnLoan()) throw new Error('item is not currently on loan')
-     this.onLoan = false
-  }
-
-  checkOut() {
-    if (this.isOnLoan()) throw new Error('item is currently on loan')
-    this.onLoan = true
+    super(title);
   }
 }
 
-module.exports = Book
+module.exports = Book;
