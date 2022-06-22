@@ -19,8 +19,8 @@ describe("Book", () => {
     });
 
     it("is has an author", () => {
-      expect(book.author.name).toEqual(author.name);
-      expect(book.author.pubTeleNum).toEqual(author.pubTeleNum);
+      expect(book.author.name).toEqual("Someone");
+      expect(book.author.pubTeleNum).toEqual("1234567");
     });
   });
 
